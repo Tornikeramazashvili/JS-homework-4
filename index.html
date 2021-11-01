@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Homework 4</title>
+</head>
+
+<body>
+    <script>
+
+        // 1. 
+        function isEven(number) {
+            if (number % 2 === 0) {
+                return false;
+            } else {
+                return true;
+            };
+        }
+
+        console.log(isEven(1));
+
+        // 2.
+        function getCurrencySymbolFromCode(currency) {
+            const currencyList = {
+                USD: "$",
+                GEL: "ლ",
+                EUR: "€"
+            };
+
+            if (currencyList[currency] === undefined) {
+                return currency;
+            }
+            return currencyList[currency];
+        }
+
+        console.log(getCurrencySymbolFromCode("USD"));
+
+        // 3.
+        function toLower(sentence) {
+            return sentence.toLowerCase();
+        }
+
+        console.log(toLower("MY NAME IS JOHN"));
+
+        // 4. 
+        function filterEven(numbers) {
+            return numbers.filter((num) => num % 2 === 0);
+        }
+        const filterNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        console.log(filterEven(filterNumbers));
+
+        // 5. 
+        function findName(list, name) {
+            return list.find(element => element.name === name)
+        }
+
+        const list = [
+            {
+                name: "Jeffrey",
+                address: "Houston"
+            },
+            {
+                name: "Elon",
+                country: "California"
+            },
+            {
+                name: "Larry",
+                country: "Michigan"
+            }
+        ]
+
+        console.log(findName(list, "Jeffrey"))
+
+    </script>
+</body>
+
+</html>
